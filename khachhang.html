@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <form method="POST" action="formdangky.html">
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.</p> <br>
+    <p>What is your age range?</p> <br>
+    <select name="range">
+        <option value="a">18-24</option>
+        <option value="b">25-34</option>
+        <option value="c">35-50</option>
+        <option value="d">50+</option> 
+       </select><br>
+    <p>What is your yearly income range?</p> <br>
+    <select name="irange">
+        <option value="e">$0 - $25.000</option>
+        <option value="f">$25.001 - $50.000</option>
+        <option value="g">$50.001 - $100.000</option>
+        <option value="h">$100.000+</option> 
+    </select> <br>
+    <p>Gender Identity</p> <br>
+        <input type="radio" name="rd" /> male <br>
+        <input type="radio" name="rd" /> female <br>
+    <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p> <br>
+        <input type="checkbox" name="ck" /> Product 1 <br>
+        <input type="checkbox" name="ck" /> Product 2  <br>
+        <input type="checkbox" name="ck" /> Product 3  <br>
+    <p>How often would you use our new product?</p> <br>
+        <input type="radio" name="rd" />Daily <br>
+        <input type="radio" name="rd" />Weekly<br>
+        <input type="radio" name="rd" /> Monthly <br>
+    <p>What would you pay for the new product?</p><br>
+        $<input name="account" type="text"/>.<input name="account" type="number"/> <br>
+    <p>What features would you like to see in the new product.</p><br>
+    <td>
+        <textarea cols="50" rows="4"></textarea>
+    </td>
+    <p>
+        Please rate your level of agreement with the following statements.</p><br>
+    <table>
+        <tr>
+            <td></td>
+            <td>Strongly Disagree</td>
+            <td>Disagree</td>
+            <td>Agree</td>
+            <td>Strongly Agree</td>
+        </tr>
+        <tr>
+            <td text-align:left;> Our products are priced fairly.></td>
+            <td><input type="radio" name="rd" /><br>1</td>
+            <td><input type="radio" name="rd" /><br>2</td>
+            <td><input type="radio" name="rd" /><br>3</td>
+            <td><input type="radio" name="rd" /><br>4</td>
+        </tr>
+        <tr>
+            <td text-align:left;>Our products are high quality.</td>
+            <td><input type="radio" name="rd" /><br>1</td>
+            <td><input type="radio" name="rd" /><br>2</td>
+            <td><input type="radio" name="rd" /><br>3</td>
+            <td><input type="radio" name="rd" /><br>4</td>
+        </tr>
+        <tr>
+            <td text-align:left;>You would recommend our product to a friend or coworker.</td>
+            <td><input type="radio" name="rd" /><br>1</td>
+            <td><input type="radio" name="rd" /><br>2</td>
+            <td><input type="radio" name="rd" /><br>3</td>
+            <td><input type="radio" name="rd" /><br>4</td>
+        </tr> <br>
+    </table>
+    <p><input type="button" name="Đăng kí" value="Submit" /></p>
+    </form>
+</body>
+</html>
