@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÁY TÍNH</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="number" id="s1">  <input type="number" id="s2">
+    <br><br>
+    <td><button onclick="Kq1()"> Addition(+)</button></td> 
+    <td><button onclick="Kq2()"> Subtraction(-)</button></td>
+    <td><button onclick="Kq3()"> Multiplication(x)</button></td>
+    <td><button onclick="Kq4()"> Division(/)</button></td>
+    <br><br>
+    Result Division:<input type="number" readonly id="Kq" value>
+    <script>
+        //debugger
+    function Kq1() {
+        let Numa=Number(document.getElementById('s1').value);
+        let Numb=Number(document.getElementById('s2').value);
+        document.getElementById('Kq').value = Numa+Numb;
+    }
+    function Kq2() {
+        let Numa=Number(document.getElementById('s1').value);
+        let Numb=Number(document.getElementById('s2').value);
+        document.getElementById('Kq').value = Numa-Numb;
+    }
+    function Kq3() {
+        let Numa=Number(document.getElementById('s1').value);
+        let Numb=Number(document.getElementById('s2').value);
+        document.getElementById('Kq').value = Numa*Numb;
+    }
+    function Kq4() {
+        let Numa=Number(document.getElementById('s1').value);
+        let Numb=Number(document.getElementById('s2').value);
+        document.getElementById('Kq').value = Numa/Numb;
+    }
+    </script>
+</html>
