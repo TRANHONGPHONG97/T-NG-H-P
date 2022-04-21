@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+<body>
+    <p>ENGLISH: <input type="text" id = "en" > </p>
+    <input type="button" onclick="trans()" value="Translate">
+    <p id= "result"></p>
+    <script>
+        function trans() {
+            let ENGLISHS = ["Dog", "Cat", "Chicken", "Duck"];
+            let VIETNAMMES = ["Chó", "Mèo", "Gà", "Vịt"];
+            let input = document.getElementById("en").value;
+            let i;
+            for (i=0; i < ENGLISHS.length; i++) {
+                if (input == ENGLISHS[i]) {
+                   document.getElementById('result').innerHTML=VIETNAMMES[i];
+                break;
+                } else {
+                    document.write("Không có kết quả");
+                    break;
+                } 
+            }
+        }
+    </script>
+</body>
+</html>
