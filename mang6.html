@@ -11,18 +11,18 @@
     <input type="button" onclick="trans()" value="Translate">
     <p id= "result"></p>
     <script>
+        let Kq = document.getElementById("result");
         function trans() {
+            let input = document.getElementById("en").value;
             let ENGLISHS = ["Dog", "Cat", "Chicken", "Duck"];
             let VIETNAMMES = ["Chó", "Mèo", "Gà", "Vịt"];
-            let input = document.getElementById("en").value;
-            let i;
-            for (i=0; i < ENGLISHS.length; i++) {
+          
+            for (let i=0; i < ENGLISHS.length; i++) {
                 if (input == ENGLISHS[i]) {
-                   document.getElementById('result').innerHTML=VIETNAMMES[i];
+                   Kq.innerHTML=`${VIETNAMMES[i]}`;
                 break;
                 } else {
-                    document.write("Không có kết quả");
-                    break;
+                    Kq.innerHTML=("Không có kết quả");
                 } 
             }
         }
