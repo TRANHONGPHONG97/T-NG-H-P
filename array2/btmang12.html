@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+          let count=0;
+            let str=prompt("nhập 1 chuỗi các kí tự có trong mảng(ngăn cách bởi dấu ,):");
+            let arr=str.split(",");
+            for(let i=0;i<arr.length;i++) {
+                if(Number.isInteger(Number(arr[i]))) {
+                    count++;
+                }
+            }
+            alert(`Số kí tự số trong chuỗi vừa nhập là: ${count}`);
+    </script>
+</body>
+</html>
