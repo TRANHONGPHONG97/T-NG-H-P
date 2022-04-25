@@ -1,0 +1,58 @@
+body{
+    background: black;
+    color: gray;
+  }
+  h1{
+    text-align: center;
+    color: white;
+  }
+  .clearfix{
+    clear: both;
+  }
+  #box{
+    width: 350px;
+    overflow: auto;
+    margin: 40px auto;
+    background: gray;
+    padding-bottom: 40px;
+    border-radius: 10px;
+  }
+  #message{
+    background: gray;
+    color: white;
+  }
+  #gameBoard li{
+    float: left;
+    margin: 10px;
+    height: 70px;
+    width: 70px;
+    font-size: 50px;
+    background: gray;
+    color:white;
+    list-style: none;
+    text-align: center;
+    border-radius: 5px;
+  }
+  #gameBoard li:hover, #reset:hover{
+    cursor: pointer;
+    background: black;
+  }
+  #reset{
+    border: 0;
+    background: gray;
+    color: white;
+    width: 70%;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .o{
+    color: blue !important;
+  }
+  .x{
+    color: red !important;
+  }
+  footer{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+  }

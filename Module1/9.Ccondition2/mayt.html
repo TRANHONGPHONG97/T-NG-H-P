@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4">
+                    <input style="text-align: right;" type="text" id="screen">
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="In_number(1)">1</button></td>
+                <td><button onclick="In_number(2)">2</button></td>
+                <td><button onclick="In_number(3)">3</button></td>
+                <td><button onclick="key_operand('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="In_number(4)">4</button></td>
+                <td><button onclick="In_number(5)">5</button></td>
+                <td><button onclick="In_number(6)">6</button></td>
+                <td><button onclick="key_operand('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button  onclick="In_number(7)">7</button></td>
+                <td><button  onclick="In_number(8)">8</button></td>
+                <td><button  onclick="In_number(9)">9</button></td>
+                <td><button  onclick="key_operand('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="key_operand('C')">C</button></td>
+                <td><button  onclick="In_number(0)">0</button></td>
+                <td><button onclick="key_operand('=')">=</button></td>
+                <td><button onclick="key_operand('/')">/</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var selectedOperator = false;
+        var screen = document.querySelector("#screen");
+        function In_number(number) {
+            selectedOperator = false;
+            screen.value += number
+        }
+        function key_operand(operand) {
+            switch (true) {
+                case operand == "C": {
+                    screen.value = "";
+                    break;
+                }
+                case operand == "=" && screen.value != "": {
+                    screen.value = eval (screen.value);
+                    break;
+                }
+                case !selectedOperator && screen.value != "": {
+                    screen.value += operand;
+                    selectedOperator = true;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

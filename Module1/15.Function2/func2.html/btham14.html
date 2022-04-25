@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9</title>
+</head>
+<body>
+    <p id="bai9"></p><br>
+        <input type="text" id="array"><br>
+        <button onclick="reverseStrings()" value="Submit">Submit</button>
+        <p id="showRandom"></p><br>
+    <script>
+    function reverseStrings() {
+    let string = document.getElementById('array').value;
+    let array = ['/','a','z','a',9,'t','r','q',3,'t','a'];
+    let x = 0;
+    let count = 0;
+    // array = string.split('');
+    // alert(array);
+
+    for (let i = 0; i < array.length; i++) {
+        if (string == array[i]) {
+            x = 1;
+            count++;
+        // } else {
+            // return -1;
+        }
+    }
+    if (x == 1) {
+        alert(` Số lần xuất hiện là: ${count}`)
+    } else {
+        alert(`-1`)
+    }
+}
+    </script>
+</body>
+</html>

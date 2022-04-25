@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi tiền</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>Form Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+       <tr>
+        <td><input type="number" id="Amount"></td>
+       
+            <td>
+                <select name="" id="giatri1">
+                    <option value="a">VND</option>
+                    <option value="b">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="giatri2"> 
+                    <option value="a">VND</option>
+                    <option value="b">USD</option>
+                </select>
+            </td>
+            <td><button onclick="chuyentien()">Convert</button></td>
+        </tr>  
+    </table>
+</body>
+<script>   
+    function chuyentien() {
+        let giatri = document.getElementById('Amount').value;
+        let giatri1 = document.getElementById('giatri1').value;
+        let giatri2 = document.getElementById('giatri2').value;
+        if (giatri1 == giatri2) {
+            document.write('Số tiền đổi là: ' + giatri);   
+        }
+        if (giatri1 == "a" && giatri2 == "b") {
+            document.write('Số tiền đổi là: ' + giatri/23000);
+        }
+        if (giatri1 == "b" && giatri2 == "a") {
+            document.write('Số tiền đổi là: ' + giatri*23000);  
+        }
+    } 
+</script>
+</html>

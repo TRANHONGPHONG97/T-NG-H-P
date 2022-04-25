@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <script>
+        // const isPrime=(number) => {
+        //     let count=0;
+        //     for(let i=2;i<number;i++) {
+        //         if(number%2==0) {
+        //             count=1;
+        //             alert("không phải là số nguyên tố");
+        //             break;
+        //         }
+        //     }
+        //     if(count==0) {
+        //         alert("Là số nguyên tố")
+        //     }
+        // }
+        // isPrime(101);
+
+        var flag = true;
+        function kiem_tra_snt(n) {
+            if (n < 2) {
+                flag = false;
+            } else if (n == 2) {
+                flag = true;
+            } else if (n % 2 == 0) {
+                flag = false;
+            } else {
+                for (var i = 3; i < n-1; i += 2) {
+                    if (n % i == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if (flag == true) {
+                document.write(n + " là số nguyên tố <br/>");
+            } else {
+                document.write(n + " không phải là số nguyên tố <br/>");
+            }
+        }
+        kiem_tra_snt(prompt('Enter here'));
+    </script> 
+</body>
+</html>

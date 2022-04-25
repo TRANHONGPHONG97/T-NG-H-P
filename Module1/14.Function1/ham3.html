@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+
+<body>
+    <script>
+        function minArray(arr) {
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        let arr1 = [3, 5, 1, 8, -3, 7, 8];
+        let min = minArray(arr1);
+        alert(min);
+    </script>
+
+    <!-- <script>
+        let arr = [];
+
+        const minArr=(arr1) => {
+            let min=arr1[0];
+            let index=0;
+            if(arr1.length==0) {
+                alert (-1);  
+                return;       
+            };
+            for(let i=1;i<arr1.length;i++) {
+                    if(arr1[i]<min) {
+                        min=arr1[i];
+                        index=i;    
+                    }
+            }
+            alert(`${min}  index:${index}`);
+        }
+        minArr(arr);
+    </script> -->
+
+    <!-- <script>
+        function minArray(arr) {
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        let arr2 = [7, 12, 6, 9, 20, 56, 89];
+        let min = minArray(arr2);
+        alert(min);
+    </script> -->
+
+    <!-- <script>
+        var i =1;
+        function minArray(arr4) {
+            let min = arr4[0];
+            for (;i < arr3.length; i++) {
+                if (arr4[i] < min) {
+                    min = arr4[i]
+                }
+            }
+            return min;
+        }
+        let arr4 = [0, 0, 0, 0, 0, 0];
+        let min = minArray(arr4);
+        alert(min);
+       
+    </script> -->
+
+</body>
+
+</html>
