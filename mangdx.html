@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng đối xứng</title>
+</head>
+<body>
+    <script>
+        let number = prompt("Nhập vào dãy số tự nhiên");
+        function reverse(number){
+            number = number.toString()
+            return number.split ("").reverse().join("");
+        }
+        function symmetric(number){
+            let flag =0;
+            if (reverse(number) == number) {
+                flag =1;
+            }
+            return flag;
+        }
+        if (symmetric(number) == 1) {
+            alert (`${number} là số ddx`);
+        }
+        else {
+            alert  (`${number} k là số ddx`);
+        }
+    </script>
+</body>
+</html>

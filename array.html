@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <button id="lesson5">lesson 5</button>
+    <p id="lessonX"></p>
+    <script>
+// let temp;
+// let sum = 0;
+// let remainder;
+// let num = parseInt(prompt("Nhập chuỗi số kiểm tra"));
+
+//    for (temp = num; num!=0; num=num/10){
+//         remainder= num%10;
+//         sum=(sum*10) + remainder;
+//    } 
+//     if(temp==num) {
+//     document.write(`${temp} + Là số đối xứng`);
+   
+//    } else {
+//     document.write(`${temp} + Không là số đối xứng`);
+//    }  
+
+
+ 
+    // let num = [123321];
+    // let newnum = num +'';
+    // let temp='';
+    // for(i = num.length -1; i>=0; i--) {
+    //     temp += newnum[i];
+    // } 
+    // document.write(temp);
+
+    // if(temp==num) {
+    //     document.write( " is a palindrome");
+    // }  
+    //     else {
+    //     document.write( " is not a palindrome");
+//     var msg1 = 'hello';
+// var msg2 = 'world!';
+
+// for(num1=1; num1<=msg1.length; num1++)
+// {
+//     for(num2=1; num2<=msg2.length; num2++)
+//     {
+//         if(msg1.length == 4)
+//         {
+//             document.write(msg1 +' '+ msg2);
+//         }
+//     }
+    
+//     if(num1 !=4)
+//     {
+//         console.log(msg1.length + msg2.length);
+//     }
+// }
+//     // document.write(x);
+
+
+    
+function runLesson() {
+    let number1 = document.getElementById('number1').value;
+    let number2 = document.getElementById('number2').value;
+    let num1 = number1.split('');
+    let num2 = number2.split('');
+    for (let i = 0; i < num1.length; i++) {
+        if(num1[i] == num2[i]){
+            alert(`two array are the same`);
+            break;
+        } else {
+            alert(`two array are not the same`);
+            break;
+        }
+    }
+}
+    </script>   
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <script>
+        let number = parseInt(prompt("Nhập size của mảng"));
+        let Arr = new Array(number);
+
+        for (i = 0; i < Arr.length; i++) {
+            Arr[i] = Math.floor(Math.random() * (75 - 5 + 1)) + 5;
+        }
+        let Max = Arr[0];
+        let index = 0;
+        for (i = 0; i < Arr.length; i++) {
+            if (Arr[i] > Max) {
+                Max = Arr[i];
+                index = i;
+            }
+        }
+
+        let Min = Arr[0];
+        for (i = 0; i < Arr.length; i++) {
+            if (Arr[i] < Min) {
+                Min = Arr[i];
+                index = i;
+            }
+        }
+        document.write((Arr) + '<br>');
+        document.write(Arr.join('; ') + '<br>');
+        document.write("Số lớn nhất là: " + Max + '<br>');
+        document.write("Số nhỏ nhất là: " + Min + '<br>');
+
+        let search = parseInt(prompt("Nhập giá trị cần tìm"));
+        let position = true;
+        document.write('Vị trí số cần tìm là: ')
+        for (i = 0; i < Arr.length; i++) {
+            if (Arr[i] == search) {
+                document.write(i+', ');
+                position = false;
+            }
+        }
+        if (position) {
+            document.write(-1);
+        }
+
+    </script>
+</body>
+
+</html>
