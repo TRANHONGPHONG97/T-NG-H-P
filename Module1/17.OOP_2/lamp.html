@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
+</head>
+
+<body>
+    <button type="button" onclick="turnOn()">Bật đèn</button>
+    <button type="button" onclick="turnOff()">Tắt đèn</button>
+    <script>
+        let SwitchButton = function () {
+            this.status = false;
+            this.connectToLamp = function (electricLamp) {
+                this.status = true;
+                this.electricLamp = electricLamp;
+            }
+
+            this.switchOff = function () {
+                if (this.status) {
+                    this.electricLamp.turnOff();
+                }
+                else alert("Chưa kết nối vơi bóng đèn!");
+            }
+
+            this.switchOn = function () {
+                if (this.status)
+                    this.electricLamp.turnOn();
+                else alert("Chưa kết nối vơi bóng đèn!");
+            }
+        }
+
+        let ElectricLamp = function () {
+            this.status = false;
+
+            this.turnOff = function () {
+                if (this.status) {
+                    alert("Đèn đã tắt");
+                    this.status = false;
+                } else {
+                    alert("Đèn đã được tắt sẵn")
+                }
+            }
+
+            this.turnOn = function () {
+                if (this.status) {
+                    alert("Đèn bật");
+                } else {
+                    alert("Đèn đã được bật sẵn");
+                    this.status = true;
+                }
+            }
+        }
+
+        const turnOn = () => {
+            switchButton.switchOn();
+        }
+
+        const turnOff = () => {
+            switchButton.switchOff();
+        }
+
+        let switchButton = new SwitchButton();
+        let electricLamp = new ElectricLamp();
+        switchButton.connectToLamp(electricLamp);
+    </script>
+</body>
+
+</html>
