@@ -4,14 +4,9 @@ body {
 	height: 100%;
 }
 
-.btn {
-	background-color: rgb(74, 151, 29);
-	font-style: italic;
-	font-size: 15px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	border: 1px solid black;
-	cursor: pointer;
-	border-radius: 3px;
+.container {
+width: 500px;
+height: 500px;
 }
 
 .question-modal {
@@ -49,4 +44,23 @@ section {
 header {
 	display: flex;
 	justify-content: space-between;
+}
+.timer {
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: aquamarine;
+	text-align: center;
+	color:rgb(55, 0, 255)
+}
+.btn-score {
+	background-color: chocolate;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.btn-btn-info-1 {
+font-size: 30px;
+background-color: darkgray;
+color: black;
+border-radius: 3px;
+margin: 50px 0px 0px 500px;
 }

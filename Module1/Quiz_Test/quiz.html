@@ -13,23 +13,21 @@
      <!-- header -->
     <header class="header">
         <button type="button" id="view-scores-id"
-            class="btn score">Leaderboard</button>
+            class="btn-score">Leaderboard</button>
         <div class="timer">Time: <span id="count">0</span></div>
     </header>
     <!-- container -->
-    <main class="container">
+    <div class="container">
         <section id="welcome-modal" class="content-center">
             <article class="text-center">
-                <button type="button" id="start" class="btn btn-info 1">Start Quiz</button>
+                <button type="button" id="start" class="btn-btn-info-1">Start Quiz</button>
             </article>
         </section>
         <!-- Phần hiển thị và ẩn câu hỏi -->
         <section class="questions" id="modal-section" hidden>
             <!-- Nối câu hỏi này với câu hỏi khác -->
-            <div class="question-modal">
-            </div>
-            <div class="options-modal">
-            </div>
+            <div class="question-modal"></div>
+            <div class="options-modal"></div>
             <div class="hit"></div>
         </section>
 
@@ -41,20 +39,20 @@
             <div class="form-name">
                 <label for="initials" class="Enter-name">Enter your name: </label>
                 <input type="text" class="form-names" id="initials" placeholder="...............................">
-                <button type="button" id="submit" class="btn btn-info 2">Submit</button>
+                <button type="button" id="submit" class="btn-btn-info-2">Submit</button>
             </div>
         </section>
         <!-- Hiển thị điểm cao và quay lại phần bắt đầu -->
         <section class="highscore" id="highscoresPage">
-            <h3 class="title score">Leaderboard</h3>
+            <h3 class="title-score">Leaderboard</h3>
             <div id="scores-list">
             </div>
             <div class="Leaderboard">
-                <button type="button" id="submitGoback" class="btn btn-info 3">Go back</button>
-                <button type="button" id="submitClear" class="btn btn-info 4">Clear Leaderboard</button>
+                <button type="button" id="submitGoback" class="btn-btn-info-3">Go back</button>
+                <button type="button" id="submitClear" class="btn-btn-info-4">Clear Leaderboard</button>
             </div>
         </section>
-    </main>
+    </div>
     <!-- Liên kết Javascript -->
     <script src="quiz.js"></script>
 </body>
