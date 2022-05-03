@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ TEST</title>
+    <link rel="shortcut icon" href="image.jpg">
+    <!-- Liên kết CSS -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+     <!-- header -->
+    <header class="header">
+        <button type="button" id="view-scores-id"
+            class="btn score">Leaderboard</button>
+        <div class="timer">Time: <span id="count">0</span></div>
+    </header>
+    <!-- container -->
+    <main class="container">
+        <section id="welcome-modal" class="content-center">
+            <article class="text-center">
+                <button type="button" id="start" class="btn btn-info 1">Start Quiz</button>
+            </article>
+        </section>
+        <!-- Phần hiển thị và ẩn câu hỏi -->
+        <section class="questions" id="modal-section" hidden>
+            <!-- Nối câu hỏi này với câu hỏi khác -->
+            <div class="question-modal">
+            </div>
+            <div class="options-modal">
+            </div>
+            <div class="hit"></div>
+        </section>
+
+        <!-- Phần để hiển thị trang kết thúc bài kiểm tra và nhập tên viết tắt -->
+        <section class="class-none" id="modal-done">
+            <div class="class-header">
+                <p class="text-muted"> Score: <span id="finalscore" class="info-text"></span></p>
+            </div>
+            <div class="form-name">
+                <label for="initials" class="Enter-name">Enter your name: </label>
+                <input type="text" class="form-names" id="initials" placeholder="...............................">
+                <button type="button" id="submit" class="btn btn-info 2">Submit</button>
+            </div>
+        </section>
+        <!-- Hiển thị điểm cao và quay lại phần bắt đầu -->
+        <section class="highscore" id="highscoresPage">
+            <h3 class="title score">Leaderboard</h3>
+            <div id="scores-list">
+            </div>
+            <div class="Leaderboard">
+                <button type="button" id="submitGoback" class="btn btn-info 3">Go back</button>
+                <button type="button" id="submitClear" class="btn btn-info 4">Clear Leaderboard</button>
+            </div>
+        </section>
+    </main>
+    <!-- Liên kết Javascript -->
+    <script src="quiz.js"></script>
+</body>
+</html>
