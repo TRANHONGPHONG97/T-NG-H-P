@@ -1,0 +1,107 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #2c2a4a;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 0.6rem 0;
+  width: 12rem;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle:checked + .label {
+  background-color: #817ae6;
+}
+
+.label {
+  background-color: #d0d0d0;
+  border-radius: 100px;
+  display: inline-block;
+  margin: 0 1rem 0;
+  width: 2.6rem;
+  cursor: pointer;
+}
+
+.ball {
+  background: #2c2a4a;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  margin: 0.1rem;
+  animation: slideOff 0.2s ease-in forwards;
+}
+
+.toggle:checked + .label .ball {
+  animation: slideOn 0.2s ease-in forwards;
+}
+
+.message {
+  margin-top: 2rem;
+  transition: 0.5s ease;
+  opacity: 0.8;
+  text-align: center;
+  line-height: 2;
+}
+.message span {
+  opacity: 1;
+  background-color: #4a495a;
+  padding: 0.01rem 0.5rem;
+  border-radius: 100px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.yes {
+  color: rgb(131, 253, 131);
+}
+.no {
+  color: rgb(248, 135, 135);
+}
+/* .animation {
+  animation: message 0.5s linear;
+} */
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(60%) scale(1.1);
+  }
+  100% {
+    transform: translateX(120%) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(120%) scale(1);
+  }
+  50% {
+    transform: translateX(60%) scale(1.1);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
